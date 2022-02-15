@@ -27,14 +27,16 @@ Dialog::Dialog(QWidget *parent)
     //PUT THESE INTO THE UPDATE LOOP?
     //set drone hostnames
     int col = 0;
-    for(int i=1; i<ui->tableWidget->rowCount(); i++){
+    QString drones[] = {"192.168.7.74", "192.241.4.32", "14.198.7.74", "0", "0", "0", "0", "0"};
+    for(int i=1; i<=numDrones; i++){
         QTableWidgetItem *temp = ui->tableWidget->item(i, col);
         if(!temp){
             temp = new QTableWidgetItem;
             ui->tableWidget->setItem(i, col, temp);
         }
         //set hostname
-        ui->tableWidget->item(i, col)->setText("Drone" + QString::number(i) + "_HOSTNAME");
+        //ui->tableWidget->item(i, col)->setText("Drone" + QString::number(i+1) + "_HOSTNAME");
+        ui->tableWidget->item(i, col)->setText(drones[i-1]);
     }
     //set drone statuses
     col = 1;
