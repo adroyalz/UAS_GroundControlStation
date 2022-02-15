@@ -18,6 +18,9 @@ HEADERS += \
 FORMS += \
     dialog.ui
 
+#comment the following line out to stop the console from opening on start
+CONFIG += console
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
