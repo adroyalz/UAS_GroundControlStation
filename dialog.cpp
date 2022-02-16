@@ -50,6 +50,14 @@ Dialog::Dialog(QWidget *parent)
         //ui->tableWidget->item(i, col)->setText("example");
     }
 
+    QPalette p = ui->textBrowser_2->palette();
+    p.setColor(QPalette::Active, QPalette::Base, Qt::black);
+    ui->textBrowser_2->setPalette(p);
+    //ui->textBrowser_2->setBackgroundVisible(false);
+
+    QPalette q = ui->textBrowser_3->palette();
+    q.setColor(QPalette::Active, QPalette::Base, Qt::black);
+    ui->textBrowser_3->setPalette(q);
 }
 
 Dialog::~Dialog()
